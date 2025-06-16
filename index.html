@@ -81,7 +81,6 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mobile.css" />
-    <link rel="stylesheet" href="css/common-ui.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -639,31 +638,10 @@
     <script src="js/main.js"></script>
     <script src="js/cookie-consent.js"></script>
     <script src="js/google-maps.js"></script>
+    <script src="js/show-more-services.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSB1tHg6HrtPyEzD265nYXWzwmrp0QHy4&callback=initMap"
       async
       defer></script>
-    <script>
-      // Afficher l'année en cours
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-
-      // Afficher plus de services sur mobile
-      document.addEventListener("DOMContentLoaded", function () {
-        const showMoreBtn = document.getElementById("show-more-services");
-        const hiddenServices = document.querySelectorAll(
-          ".services-grid .mobile-hide"
-        );
-
-        if (showMoreBtn && hiddenServices.length > 0) {
-          showMoreBtn.addEventListener("click", function () {
-            hiddenServices.forEach((service) => {
-              service.classList.remove("mobile-hide");
-            });
-            showMoreBtn.style.display = "none";
-          });
-        }
-      });
-    </script>
   </body>
 </html>

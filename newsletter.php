@@ -49,7 +49,7 @@ $error = isset($_GET['error']) && $_GET['error'] == '1';
                     </div>
                     <div class="form-group checkbox">
                         <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent">J'accepte de recevoir la newsletter d'IT2Help et confirme avoir lu la <a href="politique-confidentialite.php">politique de confidentialité</a>.</label>
+                        <label for="consent">J'accepte de recevoir la newsletter d'IT2Help et confirme avoir lu la <a href="politique-confidentialite.html">politique de confidentialité</a>.</label>
                     </div>
                     <button type="submit" class="btn-primary">S'inscrire <i class="fas fa-arrow-right"></i></button>
                 </form>
