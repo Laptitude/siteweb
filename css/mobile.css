@@ -1,0 +1,67 @@
+/**
+ * IT2Help - Améliorations UI/UX Mobile
+ * Ce fichier contient des améliorations ciblées pour l'interface mobile du site IT2Help.
+ * Ces styles sont uniquement appliqués aux appareils mobiles (écrans ≤ 768px).
+ */
+
+/* Améliorations mobiles minimales et correctifs ergonomiques */
+@media screen and (max-width: 768px) {
+  /* Correction du débordement horizontal */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Zone de clic plus grande pour les boutons et liens */
+  a,
+  button,
+  .btn-primary,
+  .btn-outline {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Images responsives */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Correction du menu mobile si besoin */
+  .mobile-menu {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Correction du header sticky */
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+  }
+
+  /* Correction des marges excessives sur mobile */
+  .message-success,
+  .message-error {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+/* Accessibilité : réduction des animations sur mobile */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

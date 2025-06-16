@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Résultats de recherche - IT2Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/ui-ux-improvements.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta
+      name="description"
+      content="Résultats de recherche IT2Help - Trouvez facilement nos services informatiques et informations." />
+    <meta name="robots" content="noindex, follow" />
+
+    <!-- Favicons pour tous les appareils -->
+    <link rel="icon" href="images/logo/001.png" />
+    <link rel="apple-touch-icon" href="images/logo/001.png" />
+    <link rel="shortcut icon" href="images/logo/001.png" type="image/png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <meta name="msapplication-TileImage" content="images/logo/001.png" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="main-header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/logo/002.png"
+              alt="IT2Help Logo"
+              class="logo-img" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Prestations</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <form class="search-form" action="search-results.html" method="get">
+            <input
+              type="text"
+              class="search-input active"
+              id="search-input"
+              placeholder="Rechercher..."
+              aria-label="Rechercher sur le site" />
+            <button
+              type="button"
+              class="search-btn"
+              id="search-toggle"
+              aria-label="Ouvrir la recherche">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <div class="search-results" id="search-results">
+            <!-- Les résultats de recherche s'afficheront ici via JavaScript -->
+          </div>
+        </div>
+        <div class="mobile-menu-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main class="container">
+      <!-- Fil d'Ariane pour navigation -->
+      <ul class="breadcrumb">
+        <li><a href="index.html">Accueil</a></li>
+        <li>Résultats de recherche</li>
+      </ul>
+
+      <section class="page-header">
+        <h1 style="padding-top: var(--navbar-height)">
+          Résultats de recherche
+        </h1>
+        <div class="separator"></div>
+        <p id="search-query-text">
+          Recherche pour : <span id="search-query"></span>
+        </p>
+      </section>
+
+      <section class="search-results-section">
+        <div id="search-results-container">
+          <!-- Les résultats seront chargés ici par JavaScript -->
+          <div class="loading-indicator">
+            <i class="fas fa-spinner fa-spin"></i> Chargement des résultats...
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Vous n'avez pas trouvé ce que vous cherchiez ?</h2>
+          <p>
+            N'hésitez pas à nous contacter directement pour toute question
+            concernant nos services.
+          </p>
+          <a href="contact.html" class="btn-primary">Nous contacter</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>IT2Help</h3>
+            <p>
+              Votre partenaire informatique de confiance. Expertise, proximité
+              et solutions sur mesure pour tous vos besoins technologiques.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/profile.php?id=61575849412600&locale=fr_FR"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/it2help?igsh=MnJ4bWtzd2N6aDB2"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section links">
+            <h3>Liens Rapides</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="services.html">Prestations</a></li>
+              <li><a href="catalogue.html">Catalogue</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Rennes<br />
+              <i class="fas fa-map-marker-alt"></i> La Roche-sur-Yon - ~25km
+              alentour
+            </p>
+            <p><i class="fas fa-envelope"></i> contact.it2help@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="legal-links">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="politique-confidentialite.html"
+              >Politique de Confidentialité</a
+            >
+            <a href="cgv.html">CGV</a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year"></span> IT2Help. Tous droits
+              réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de la page">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/mobile-ui-improvements.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="js/ui-ux-improvements.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      // Afficher l'année en cours
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Afficher les résultats de recherche
+      document.addEventListener("DOMContentLoaded", function () {
+        // Récupérer le paramètre de recherche dans l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get("q");
+
+        // Afficher le terme recherché
+        if (query) {
+          document.getElementById("search-query").textContent = query;
+          document.getElementById("search-input").value = query;
+
+          // Simuler un délai de chargement pour une meilleure UX
+          setTimeout(function () {
+            // Utiliser le même moteur de recherche que dans le script search.js
+            const searchData = window.searchData || [];
+            const results = searchData.filter((item) => {
+              const titleMatch = item.title
+                .toLowerCase()
+                .includes(query.toLowerCase());
+              const descMatch = item.description
+                .toLowerCase()
+                .includes(query.toLowerCase());
+              const keywordMatch = item.keywords
+                .toLowerCase()
+                .includes(query.toLowerCase());
+
+              return titleMatch || descMatch || keywordMatch;
+            });
+
+            // Afficher les résultats
+            const resultsContainer = document.getElementById(
+              "search-results-container"
+            );
+            resultsContainer.innerHTML = "";
+
+            if (results.length > 0) {
+              // Créer les éléments de résultat
+              results.forEach((result) => {
+                const resultItem = document.createElement("div");
+                resultItem.className = "search-result-full";
+
+                // Déterminer l'icône en fonction du type
+                let iconClass = "fa-question";
+                switch (result.type) {
+                  case "service":
+                    iconClass = "fa-tools";
+                    break;
+                  case "zone":
+                    iconClass = "fa-map-marker-alt";
+                    break;
+                  case "contact":
+                    iconClass = "fa-envelope";
+                    break;
+                  case "produit":
+                    iconClass = "fa-shopping-cart";
+                    break;
+                  case "avis":
+                    iconClass = "fa-comment";
+                    break;
+                }
+
+                resultItem.innerHTML = `
+                  <div class="search-result-header">
+                    <div class="search-result-icon">
+                      <i class="fas ${iconClass}"></i>
+                    </div>
+                    <h3><a href="${result.url}">${result.title}</a></h3>
+                  </div>
+                  <div class="search-result-content">
+                    <p>${result.description}</p>
+                    <a href="${result.url}" class="search-result-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                `;
+
+                resultsContainer.appendChild(resultItem);
+              });
+
+              const resultCount = document.createElement("div");
+              resultCount.className = "search-result-count";
+              resultCount.innerHTML = `<p>${results.length} résultat${
+                results.length > 1 ? "s" : ""
+              } trouvé${results.length > 1 ? "s" : ""}</p>`;
+              resultsContainer.prepend(resultCount);
+            } else {
+              // Aucun résultat
+              const noResults = document.createElement("div");
+              noResults.className = "no-results-full";
+              noResults.innerHTML = `
+                <div class="no-results-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <h3>Aucun résultat trouvé pour "${query}"</h3>
+                <p>Suggestions :</p>
+                <ul>
+                  <li>Vérifiez l'orthographe des termes de recherche.</li>
+                  <li>Essayez d'autres mots-clés.</li>
+                  <li>Utilisez des termes plus généraux.</li>
+                </ul>
+              `;
+              resultsContainer.appendChild(noResults);
+            }
+          }, 800);
+        } else {
+          // Pas de paramètre de recherche
+          document.getElementById("search-query-text").textContent =
+            "Veuillez saisir un terme de recherche";
+          document.getElementById("search-results-container").innerHTML = `
+            <div class="no-query">
+              <p>Aucun terme de recherche n'a été spécifié.</p>
+              <p>Utilisez la barre de recherche ci-dessus pour trouver ce que vous cherchez.</p>
+            </div>
+          `;
+        }
+      });
+    </script>
+  </body>
+</html>

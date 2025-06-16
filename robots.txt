@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Bloquer les dossiers et fichiers internes
+Disallow: /includes/
+Disallow: /old_html_files/
+Disallow: /logs/
+Disallow: /PHPMailer/
+Disallow: /.vscode/
+Disallow: /phpmailer.zip
+Disallow: /get-csrf-token.php
+Disallow: /.htaccess
+Disallow: /config.php
+
+# Plan de site
+Sitemap: https://it2help.fr/sitemap.xml 

@@ -1,0 +1,302 @@
+/**
+ * Styles pour la carte Google Maps et les contrôles de sélection de zone
+ */
+
+/* Styles pour Google Maps et zones d'intervention */
+.intervention-zones {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto 1.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  min-height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.zone-selectors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.zone-selector-btn {
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-width: 120px;
+}
+
+.zone-selector-btn:hover {
+  background-color: var(--primary-color-light);
+}
+
+.zone-selector-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.zone-selector-btn[data-zone="rennes"] {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.zone-selector-btn[data-zone="rennes"]:hover,
+.zone-selector-btn[data-zone="rennes"].active {
+  background-color: #4285f4;
+  color: white;
+}
+
+.zone-selector-btn[data-zone="laRoche"] {
+  border-color: #ea4335;
+  color: #ea4335;
+}
+
+.zone-selector-btn[data-zone="laRoche"]:hover,
+.zone-selector-btn[data-zone="laRoche"].active {
+  background-color: #ea4335;
+  color: white;
+}
+
+/* Style pour les info-bulles */
+.gm-style .gm-style-iw {
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+.map-info-window {
+  font-family: "Inter", sans-serif;
+}
+
+.map-info-title {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.map-info-description {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+  #map {
+    height: 420px !important;
+    min-height: 350px;
+    border-radius: 12px;
+  }
+  .zone-selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.15rem;
+    margin-bottom: 0.3rem;
+  }
+  .zone-selector-btn {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.3rem;
+    border-radius: 6px;
+    min-width: unset;
+    min-height: unset;
+    line-height: 1;
+  }
+  .map-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 300px;
+  }
+
+  .zone-selectors {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .zone-selector-btn {
+    width: 90%;
+    min-width: 0;
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}
+
+/* Styles pour la section Google Maps */
+.google-maps-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.map-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-subtitle {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Conteneur de la carte */
+.map-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Zone de sélection */
+.zone-selector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.zone-selector-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zone-selector-btn:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zone-selector-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.zone-selector-btn .zone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* Styles pour la fenêtre d'info */
+.map-info-window {
+  padding: 0.5rem;
+}
+
+.map-info-title {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-info-description {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Ajustements responsifs */
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px;
+  }
+
+  .zone-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zone-selector-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-container {
+    height: 350px;
+  }
+
+  .map-title {
+    font-size: 1.75rem;
+  }
+
+  .map-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Style spécifique pour le bouton "Toutes nos zones" actif */
+#show-all-zones.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}

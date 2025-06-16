@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT2Help - Contact</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://www.google.com https://api.emailjs.com; frame-src 'self' https://www.google.com;" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/common-ui.css" />
+    <link rel="stylesheet" href="css/contact-ui.css" />
+    <link rel="stylesheet" href="css/form-ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta
+      name="description"
+      content="Contactez IT2Help pour toutes vos questions ou demandes de devis concernant nos services informatiques." />
+    <!-- Favicons pour tous les appareils -->
+    <link rel="icon" href="images/logo/001.png" />
+    <link rel="apple-touch-icon" href="images/logo/001.png" />
+    <link rel="shortcut icon" href="images/logo/001.png" type="image/png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <meta name="msapplication-TileImage" content="images/logo/001.png" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="main-header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/logo/002.png"
+              alt="IT2Help Logo"
+              class="logo-img" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Prestations</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="contact.html" class="active">Demande</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menu mobile">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-menu" aria-label="Menu mobile">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Prestations</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="contact.html" class="active">Demande</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <div class="main-content">
+        <div class="content-zone">
+          <h1 class="page-title">Comment pouvons-nous vous aider ?</h1>
+
+          <form
+            id="contact-form-guide"
+            class="contact-form"
+            aria-label="Formulaire de contact guidé">
+            <div id="form-messages-guide" role="alert" aria-live="polite"></div>
+
+            <fieldset id="fieldset-support">
+              <legend>Quel appareil rencontre un problème ?</legend>
+              <div
+                class="options"
+                role="radiogroup"
+                aria-labelledby="support-legend">
+                <label class="option">
+                  <input type="radio" name="support" value="PC" required />
+                  <i class="fas fa-desktop" aria-hidden="true"></i>
+                  <span>PC Fixe</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="support" value="Portable" />
+                  <i class="fas fa-laptop" aria-hidden="true"></i>
+                  <span>PC Portable</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="support" value="Tablette" />
+                  <i class="fas fa-tablet-alt" aria-hidden="true"></i>
+                  <span>Tablette</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="support" value="Téléphone" />
+                  <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                  <span>Smartphone</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="support" value="Imprimante" />
+                  <i class="fas fa-print" aria-hidden="true"></i>
+                  <span>Imprimante</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="support" value="Internet" />
+                  <i class="fas fa-wifi" aria-hidden="true"></i>
+                  <span>Internet</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="support" value="Autre" />
+                  <i class="fas fa-question-circle" aria-hidden="true"></i>
+                  <span>Autre</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset id="fieldset-probleme">
+              <legend>Quel est le problème rencontré ?</legend>
+              <div
+                class="options"
+                role="radiogroup"
+                aria-labelledby="probleme-legend">
+                <label class="option">
+                  <input
+                    type="radio"
+                    name="probleme"
+                    value="Lenteur"
+                    required />
+                  <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                  <span>Lenteur</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="probleme" value="Virus" />
+                  <i class="fas fa-bug" aria-hidden="true"></i>
+                  <span>Virus</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="probleme" value="Ne démarre pas" />
+                  <i class="fas fa-power-off" aria-hidden="true"></i>
+                  <span>Ne démarre pas</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="probleme" value="Internet" />
+                  <i class="fas fa-wifi" aria-hidden="true"></i>
+                  <span>Connexion</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="probleme" value="Autre" />
+                  <i class="fas fa-question-circle" aria-hidden="true"></i>
+                  <span>Autre</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset id="fieldset-intervention">
+              <legend>Quel type d'intervention souhaitez-vous ?</legend>
+              <div
+                class="options"
+                role="radiogroup"
+                aria-labelledby="intervention-legend">
+                <label class="option">
+                  <input
+                    type="radio"
+                    name="intervention"
+                    value="Distance"
+                    required />
+                  <i class="fas fa-laptop-house" aria-hidden="true"></i>
+                  <span>À distance</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="intervention" value="Domicile" />
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  <span>À domicile</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="intervention" value="Atelier" />
+                  <i class="fas fa-tools" aria-hidden="true"></i>
+                  <span>En atelier</span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="intervention" value="Conseil" />
+                  <i class="fas fa-comments" aria-hidden="true"></i>
+                  <span>Conseil</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset id="fieldset-urgence">
+              <legend>Quel est le niveau d'urgence ?</legend>
+              <div
+                class="options"
+                role="radiogroup"
+                aria-labelledby="urgence-legend">
+                <label class="option">
+                  <input type="radio" name="urgence" value="Faible" required />
+                  <i class="fas fa-clock" aria-hidden="true"></i>
+                  <span>Non urgent<br /><small>Dans le mois</small></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="urgence" value="Moyenne" />
+                  <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+                  <span>Modéré<br /><small>Dans la semaine</small></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="urgence" value="Haute" />
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                  <span>Urgent<br /><small>Dans les 48h</small></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="urgence" value="Critique" />
+                  <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                  <span>Très urgent<br /><small>Aujourd'hui</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset id="fieldset-disponibilites">
+              <legend>Quelles sont vos disponibilités ?</legend>
+              <div
+                class="options"
+                role="radiogroup"
+                aria-labelledby="disponibilites-legend">
+                <label class="option">
+                  <input
+                    type="radio"
+                    name="disponibilites"
+                    value="Matin"
+                    required />
+                  <i class="fas fa-sun" aria-hidden="true"></i>
+                  <span>Matin<br /><small>9h - 12h</small></span>
+                </label>
+                <label class="option">
+                  <input
+                    type="radio"
+                    name="disponibilites"
+                    value="Apres-midi" />
+                  <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+                  <span>Après-midi<br /><small>14h - 18h</small></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="disponibilites" value="Soiree" />
+                  <i class="fas fa-moon" aria-hidden="true"></i>
+                  <span>Soirée<br /><small>18h - 20h</small></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="disponibilites" value="Flexible" />
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span>Flexible<br /><small>À convenir</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="name">Votre nom *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                maxlength="100"
+                placeholder="Ex: Jean Dupont"
+                aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Votre email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                maxlength="100"
+                placeholder="Ex: jean.dupont@email.com"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Décrivez votre problème en détail *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                maxlength="5000"
+                placeholder="Expliquez-nous en détail le problème que vous rencontrez..."
+                aria-required="true"></textarea>
+              <small id="message-counter">0/5000 caractères</small>
+            </div>
+
+            <div class="form-group checkbox">
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                required
+                aria-required="true" />
+              <label for="privacy">
+                J'accepte que mes données soient utilisées pour le traitement de
+                ma demande *
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Envoyer ma demande
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>IT2Help</h3>
+            <p>
+              Votre partenaire informatique de confiance. Expertise, proximité
+              et solutions sur mesure pour tous vos besoins technologiques.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section links">
+            <h3>Liens Rapides</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="services.html">Prestations</a></li>
+              <li><a href="catalogue.html">Catalogue</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Rennes<br />
+              <i class="fas fa-map-marker-alt"></i> La Roche-sur-Yon - ~25km
+              alentour
+            </p>
+
+            <p><i class="fas fa-envelope"></i> contact.it2help@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="legal-links">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="politique-confidentialite.html"
+              >Politique de Confidentialité</a
+            >
+            <a href="cgv.html">CGV</a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year"></span> IT2Help. Tous droits
+              réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de la page">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/mobile-ui-improvements.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script>
+      // Afficher l'année en cours
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Script pour le défilement automatique vers la section suivante
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = [
+          "support",
+          "probleme",
+          "intervention",
+          "urgence",
+          "disponibilites",
+        ];
+
+        sections.forEach((name, idx) => {
+          document
+            .querySelectorAll(`input[name="${name}"]`)
+            .forEach((input) => {
+              input.addEventListener("change", function () {
+                // Désélectionner tous les autres dans la même section pour forcer le choix unique
+                document
+                  .querySelectorAll(`input[name="${name}"]`)
+                  .forEach((radio) => {
+                    if (radio !== input) radio.checked = false;
+                  });
+
+                // Scroll fluide vers le début de la section suivante
+                const nextSection = sections[idx + 1];
+                if (nextSection) {
+                  const nextFieldset = document
+                    .querySelector(`input[name="${nextSection}"]`)
+                    .closest("fieldset");
+                  if (nextFieldset) {
+                    // Calculer la position avec un offset pour le header
+                    const headerHeight =
+                      document.querySelector(".main-header").offsetHeight;
+                    const fieldsetTop =
+                      nextFieldset.getBoundingClientRect().top +
+                      window.pageYOffset;
+                    const scrollPosition = fieldsetTop - headerHeight - 20; // 20px de marge supplémentaire
+
+                    window.scrollTo({
+                      top: scrollPosition,
+                      behavior: "smooth",
+                    });
+
+                    // Focus sur le premier input de la section suivante
+                    setTimeout(() => {
+                      const nextInput = nextFieldset.querySelector(
+                        'input[type="radio"]'
+                      );
+                      if (nextInput) nextInput.focus();
+                    }, 400);
+                  }
+                }
+              });
+            });
+        });
+      });
+
+      // Script pour masquer les cartes de contact sauf Email sur mobile
+      (function () {
+        // Vérifier si l'appareil est mobile
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          // Attendre que le DOM soit chargé
+          if (document.readyState === "loading") {
+            document.addEventListener(
+              "DOMContentLoaded",
+              hideAllContactCardsExceptEmail
+            );
+          } else {
+            hideAllContactCardsExceptEmail();
+          }
+        }
+
+        function hideAllContactCardsExceptEmail() {
+          // Optimiser le centrage de la page
+          const container = document.querySelector("main.container");
+          if (container) {
+            container.style.padding = "0";
+            container.style.width = "100%";
+            container.style.maxWidth = "100%";
+            container.style.overflowX = "hidden";
+            container.style.boxSizing = "border-box";
+          }
+
+          // Centrer la section d'en-tête
+          const pageHeader = document.querySelector(".page-header");
+          if (pageHeader) {
+            pageHeader.style.padding = "1rem";
+            pageHeader.style.textAlign = "center";
+          }
+
+          // Optimiser le conteneur de contenu de contact
+          const contactContent = document.querySelector(".contact-content");
+          if (contactContent) {
+            contactContent.style.padding = "0 1rem";
+            contactContent.style.boxSizing = "border-box";
+            contactContent.style.width = "100%";
+          }
+
+          // Optimiser le conteneur des cartes d'info
+          const contactInfo = document.querySelector(".contact-info");
+          if (contactInfo) {
+            contactInfo.style.width = "100%";
+            contactInfo.style.display = "flex";
+            contactInfo.style.justifyContent = "center";
+            contactInfo.style.padding = "0";
+            contactInfo.style.margin = "0 0 1.5rem 0";
+          }
+
+          // Sélectionner toutes les cartes d'information
+          const contactCards = document.querySelectorAll(
+            ".contact-info .info-card"
+          );
+
+          // Masquer toutes les cartes sauf celle d'email (3ème carte)
+          contactCards.forEach(function (card, index) {
+            if (index !== 2) {
+              card.style.display = "none";
+            } else {
+              card.style.display = "flex";
+              card.style.width = "100%";
+              card.style.maxWidth = "450px";
+              card.style.margin = "0 auto";
+              card.style.boxShadow = "0 4px 10px rgba(33, 150, 243, 0.15)";
+              card.style.transition = "all 0.3s ease";
+            }
+          });
+
+          // Optimiser le centrage du formulaire
+          const formContainer = document.querySelector(
+            ".contact-form-container"
+          );
+          if (formContainer) {
+            formContainer.style.width = "100%";
+            formContainer.style.maxWidth = "450px";
+            formContainer.style.margin = "0 auto";
+            formContainer.style.boxSizing = "border-box";
+          }
+        }
+      })();
+
+      // Fonction pour récupérer le jeton CSRF
+      function fetchCSRFToken() {
+        console.log("Tentative de récupération du jeton CSRF...");
+        fetch("get-csrf-token.php")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(
+                "Erreur HTTP lors de la récupération du jeton CSRF: " +
+                  response.status
+              );
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (data.token) {
+              const csrfContainer = document.getElementById("csrf-container");
+              csrfContainer.innerHTML = `<input type="hidden" name="csrf_token" value="${data.token}">`;
+              console.log(
+                "Jeton CSRF récupéré avec succès: " +
+                  data.token.substring(0, 10) +
+                  "..."
+              );
+            } else {
+              console.error("Réponse du serveur sans jeton CSRF:", data);
+            }
+          })
+          .catch((error) => {
+            console.error(
+              "Erreur lors de la récupération du jeton CSRF:",
+              error
+            );
+          });
+      }
+
+      // Compteur de caractères pour le message
+      document.getElementById("message").addEventListener("input", function () {
+        const counter = document.getElementById("message-counter");
+        const currentLength = this.value.length;
+        counter.textContent = `${currentLength}/5000 caractères`;
+
+        // Changement de couleur si proche de la limite
+        if (currentLength > 4500) {
+          counter.style.color = "orange";
+        } else if (currentLength > 4900) {
+          counter.style.color = "red";
+        } else {
+          counter.style.color = "";
+        }
+      });
+
+      // Fonction d'envoi AJAX pour les deux formulaires
+      function handleFormAjax(formId, messageId) {
+        const form = document.getElementById(formId);
+        if (!form) return;
+
+        // Créer le conteneur de message
+        let messageContainer = document.getElementById(messageId);
+        if (!messageContainer) {
+          messageContainer = document.createElement("div");
+          messageContainer.id = messageId;
+          messageContainer.style.margin = "1.2em 0";
+          const submitButton = form.querySelector(".form-actions");
+          if (submitButton) {
+            submitButton.parentNode.insertBefore(
+              messageContainer,
+              submitButton.nextSibling
+            );
+          }
+        }
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          // Réinitialiser les messages d'erreur
+          const errorMessages = form.querySelectorAll(".error-message");
+          errorMessages.forEach((msg) => msg.remove());
+
+          // Vérification des champs requis
+          let isValid = true;
+          let missingFields = [];
+
+          // Vérifier les champs texte
+          form
+            .querySelectorAll(
+              'input[type="text"], input[type="email"], textarea'
+            )
+            .forEach((field) => {
+              if (field.hasAttribute("required") && !field.value.trim()) {
+                isValid = false;
+                missingFields.push(field.name || field.id);
+                field.style.borderColor = "red";
+              } else {
+                field.style.borderColor = "";
+              }
+            });
+
+          // Vérifier les groupes de radio buttons
+          form.querySelectorAll("fieldset").forEach((fieldset) => {
+            const radioGroup = fieldset.querySelectorAll('input[type="radio"]');
+            if (
+              radioGroup.length > 0 &&
+              !Array.from(radioGroup).some((radio) => radio.checked)
+            ) {
+              isValid = false;
+              missingFields.push(fieldset.querySelector("legend").textContent);
+              fieldset.style.borderColor = "red";
+            } else {
+              fieldset.style.borderColor = "";
+            }
+          });
+
+          // Vérifier le reCAPTCHA
+          let widgetId =
+            formId === "contact-form-libre"
+              ? window.recaptchaLibreWidgetId
+              : window.recaptchaGuideWidgetId;
+          const recaptchaResponse = grecaptcha.getResponse(widgetId);
+          if (!recaptchaResponse) {
+            isValid = false;
+            missingFields.push("reCAPTCHA");
+          }
+
+          if (!isValid) {
+            messageContainer.className = "error";
+            messageContainer.innerHTML =
+              "Veuillez remplir tous les champs obligatoires :<br>" +
+              missingFields.map((field) => `- ${field}`).join("<br>");
+            return;
+          }
+
+          // Désactiver le bouton d'envoi
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = true;
+
+          try {
+            messageContainer.innerHTML = "Envoi en cours...";
+
+            // Préparer les données
+            const formData = new FormData(form);
+            formData.append("g-recaptcha-response", recaptchaResponse);
+
+            // Formatage du contenu de l'email
+            let emailContent = "Nouvelle demande de contact :\n\n";
+            emailContent += "INFORMATIONS DE CONTACT :\n";
+            emailContent += `Nom : ${formData.get("name")}\n`;
+            emailContent += `Email : ${formData.get("email")}\n\n`;
+
+            if (formId === "contact-form-guide") {
+              emailContent += "DÉTAILS DE LA DEMANDE :\n";
+              emailContent += `Type de problème : ${formData.get(
+                "probleme"
+              )}\n`;
+              if (formData.get("probleme") === "Autre") {
+                emailContent += `Précision : ${formData.get(
+                  "probleme_autre"
+                )}\n`;
+              }
+              emailContent += `Type d'intervention : ${formData.get(
+                "intervention"
+              )}\n`;
+              emailContent += `Niveau d'urgence : ${formData.get("urgence")}\n`;
+              emailContent += `Disponibilités : ${formData.get(
+                "disponibilites"
+              )}\n`;
+            } else {
+              emailContent += "MESSAGE :\n";
+              emailContent += formData.get("message") + "\n";
+            }
+
+            formData.append("email-content", emailContent);
+
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+              messageContainer.className = "success";
+              messageContainer.innerHTML =
+                "Votre message a bien été envoyé. Nous vous répondrons rapidement.";
+              form.reset();
+              grecaptcha.reset(widgetId);
+            } else {
+              messageContainer.className = "error";
+              messageContainer.innerHTML =
+                data.message ||
+                "Une erreur est survenue lors de l'envoi du message.";
+            }
+          } catch (error) {
+            messageContainer.className = "error";
+            messageContainer.innerHTML =
+              "Une erreur est survenue lors de l'envoi du message.";
+          } finally {
+            if (submitBtn) submitBtn.disabled = false;
+            messageContainer.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        });
+      }
+
+      // Initialisation des widgets reCAPTCHA
+      document.addEventListener("DOMContentLoaded", function () {
+        window.onloadCallback = function () {
+          window.recaptchaLibreWidgetId = grecaptcha.render("recaptcha-libre", {
+            sitekey: "6Le3tygrAAAAALWqA4Y4gWaT49rdhQK5Q5HjP3aF",
+          });
+          window.recaptchaGuideWidgetId = grecaptcha.render("recaptcha-guide", {
+            sitekey: "6Le3tygrAAAAALWqA4Y4gWaT49rdhQK5Q5HjP3aF",
+          });
+          handleFormAjax("contact-form-libre", "form-messages-libre");
+          handleFormAjax("contact-form-guide", "form-messages-guide");
+        };
+        if (typeof grecaptcha !== "undefined") {
+          onloadCallback();
+        }
+      });
+
+      // Mettre à jour le script reCAPTCHA pour utiliser le callback
+      document
+        .querySelector('script[src*="recaptcha/api.js"]')
+        .setAttribute("data-callback", "onloadCallback");
+
+      // JS pour basculer l'affichage des formulaires
+      const formTypeRadios = document.querySelectorAll(
+        'input[name="formType"]'
+      );
+      const formLibre = document.getElementById("contact-form-libre");
+      const formGuide = document.getElementById("contact-form-guide");
+      formTypeRadios.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          if (this.value === "libre") {
+            formLibre.style.display = "";
+            formGuide.style.display = "none";
+          } else {
+            formLibre.style.display = "none";
+            formGuide.style.display = "";
+          }
+        });
+      });
+
+      // Effet de sélection visuel sur les options du formulaire guidé
+      function updateGuidedFormSelection() {
+        document
+          .querySelectorAll(".contact-form-guided .option")
+          .forEach((label) => {
+            const input = label.querySelector('input[type="radio"]');
+            input.addEventListener("change", function () {
+              // Retirer la classe selected de tous les labels du même groupe
+              document
+                .querySelectorAll(".contact-form-guided .option")
+                .forEach((lab) => {
+                  if (lab.querySelector('input[name="' + input.name + '"]')) {
+                    lab.classList.remove("selected");
+                  }
+                });
+              // Ajouter la classe selected au label cliqué
+              if (input.checked) {
+                label.classList.add("selected");
+              }
+            });
+          });
+      }
+      updateGuidedFormSelection();
+
+      // Afficher le champ texte si 'Autre' est sélectionné pour le problème
+      const problemeRadios = document.querySelectorAll(
+        'input[name="probleme"]'
+      );
+      const autreField = document.getElementById("autre-probleme-field");
+      problemeRadios.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          if (this.value === "Autre") {
+            autreField.style.display = "";
+            autreField.querySelector("input").required = true;
+          } else {
+            autreField.style.display = "none";
+            autreField.querySelector("input").required = false;
+          }
+        });
+      });
+
+      // Correction du pattern email dans les formulaires
+      document.querySelectorAll('input[type="email"]').forEach((input) => {
+        input.setAttribute(
+          "pattern",
+          "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        );
+      });
+
+      // Désactiver les champs requis des formulaires masqués
+      function updateFormRequiredFields() {
+        const libreForm = document.getElementById("contact-form-libre");
+        const guideForm = document.getElementById("contact-form-guide");
+        if (!libreForm || !guideForm) return;
+        if (libreForm.style.display === "none") {
+          libreForm
+            .querySelectorAll("[required]")
+            .forEach((el) => (el.disabled = true));
+          guideForm
+            .querySelectorAll("[disabled]")
+            .forEach((el) => (el.disabled = false));
+        } else {
+          guideForm
+            .querySelectorAll("[required]")
+            .forEach((el) => (el.disabled = true));
+          libreForm
+            .querySelectorAll("[disabled]")
+            .forEach((el) => (el.disabled = false));
+        }
+      }
+      // Appeler la fonction à chaque changement d'onglet
+      const radios = document.querySelectorAll('input[name="formType"]');
+      radios.forEach((radio) => {
+        radio.addEventListener("change", updateFormRequiredFields);
+      });
+      // Appel initial au chargement
+      updateFormRequiredFields();
+
+      // Gestion du formulaire guidé
+      document.addEventListener("DOMContentLoaded", function () {
+        const guidedForm = document.getElementById("contact-form-guide");
+        const messageContainer = document.getElementById("form-messages-guide");
+
+        if (guidedForm) {
+          guidedForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Validation des champs requis
+            const requiredFields = [
+              "name",
+              "email",
+              "support",
+              "probleme",
+              "intervention",
+              "urgence",
+              "disponibilites",
+              "privacy",
+            ];
+            let isValid = true;
+
+            requiredFields.forEach((field) => {
+              const input = document.getElementById(field);
+              if (!input || !input.value) {
+                isValid = false;
+                input.classList.add("error");
+              } else {
+                input.classList.remove("error");
+              }
+            });
+
+            if (!isValid) {
+              messageContainer.innerHTML =
+                '<div class="alert alert-danger">Veuillez remplir tous les champs requis</div>';
+              return;
+            }
+
+            // Formatage du contenu de l'email
+            const emailContent = `
+              Nom: ${document.getElementById("name").value}
+              Email: ${document.getElementById("email").value}
+              Type de support: ${document.getElementById("support").value}
+              Problème: ${document.getElementById("probleme").value}
+              Type d'intervention: ${
+                document.getElementById("intervention").value
+              }
+              Niveau d'urgence: ${document.getElementById("urgence").value}
+              Disponibilités: ${document.getElementById("disponibilites").value}
+            `;
+
+            // Envoi de l'email via EmailJS
+            emailjs
+              .send("service_a9wr65h", "template_k02wzul", {
+                to_email: "contact.it2help@gmail.com",
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: emailContent,
+              })
+              .then(function () {
+                messageContainer.innerHTML =
+                  '<div class="alert alert-success">Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.</div>';
+                guidedForm.reset();
+              })
+              .catch(function (error) {
+                console.error("Erreur lors de l'envoi:", error);
+                messageContainer.innerHTML =
+                  '<div class="alert alert-danger">Une erreur est survenue l\'envoi du message. Veuillez réessayer.</div>';
+              });
+          });
+        }
+      });
+    </script>
+    <script src="js/contact-form.js"></script>
+  </body>
+</html>

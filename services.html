@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT2Help - Nos Services</title>
+    <meta
+      name="description"
+      content="Découvrez nos prestations informatiques: maintenance, installation, dépannage, infogérance et conseil en cybersécurité." />
+
+    <!-- Balises Open Graph pour les réseaux sociaux -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://it2help.fr/services.html" />
+    <meta property="og:title" content="Nos Services Informatiques - IT2Help" />
+    <meta
+      property="og:description"
+      content="Découvrez nos prestations informatiques: maintenance, installation, dépannage, infogérance et conseil en cybersécurité pour entreprises et particuliers." />
+    <meta
+      property="og:image"
+      content="https://it2help.fr/images/og-image.jpg" />
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://it2help.fr/services.html" />
+    <meta name="twitter:title" content="Nos Services Informatiques - IT2Help" />
+    <meta
+      name="twitter:description"
+      content="Découvrez nos prestations informatiques: maintenance, installation, dépannage, infogérance et conseil en cybersécurité." />
+    <meta
+      name="twitter:image"
+      content="https://it2help.fr/images/og-image.jpg" />
+
+    <!-- Balises canoniques et autres -->
+    <link rel="canonical" href="https://it2help.fr/services.html" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/common-ui.css" />
+    <link rel="stylesheet" href="css/google-maps.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Favicons pour tous les appareils -->
+    <link rel="icon" href="images/logo/001.png" />
+    <link rel="apple-touch-icon" href="images/logo/001.png" />
+    <link rel="shortcut icon" href="images/logo/001.png" type="image/png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <meta name="msapplication-TileImage" content="images/logo/001.png" />
+
+    <style>
+      body {
+        background: url("images/fonds/fond_011.jpg") no-repeat center center
+          fixed;
+        background-size: cover;
+        min-height: 100vh;
+      }
+      main.container {
+        background: rgba(255, 255, 255, 0.82);
+        border-radius: 32px;
+        box-shadow: 0 8px 32px rgba(52, 152, 219, 0.1);
+        padding: 2.5rem 2.2rem 2.5rem 2.2rem;
+        max-width: 1200px;
+        margin: 2.5rem auto;
+      }
+      .services-intro-card {
+        background: #fff;
+        border-radius: 22px;
+        box-shadow: 0 4px 24px rgba(52, 152, 219, 0.1);
+        padding: 2.2rem 2.2rem 1.2rem 2.2rem;
+        margin-bottom: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .services-intro-card h1 {
+        font-size: 2.7rem;
+        font-weight: 800;
+        margin-bottom: 0.7rem;
+        letter-spacing: -1.2px;
+        color: #222;
+        text-align: left;
+      }
+      .services-intro-card .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7em;
+        font-size: 1.15em;
+        padding: 0.8em 2.2em;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(52, 152, 219, 0.1);
+        text-decoration: none;
+        margin-bottom: 1.2rem;
+      }
+      .services-intro-card .btn-primary i {
+        font-size: 1.2em;
+      }
+      .services-intro-card p {
+        font-size: 1.15em;
+        color: #444;
+        margin-top: 0.2em;
+      }
+      .services-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 2.2rem;
+      }
+      .service-card-item {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(52, 152, 219, 0.08);
+        transition: box-shadow 0.2s, transform 0.15s;
+        padding: 1.5rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .service-card-item:hover {
+        box-shadow: 0 8px 32px rgba(52, 152, 219, 0.13);
+        transform: translateY(-4px) scale(1.03);
+      }
+      .service-card-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #3498db;
+        border-radius: 50%;
+        margin: 0 auto 1rem auto;
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+      }
+      .service-card-icon i {
+        font-size: 2.1em;
+        color: #fff;
+        margin: 0;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        display: inline-block;
+      }
+      .service-card-title h3 {
+        font-size: 1.25em;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+      }
+      .service-card-content li,
+      .service-card-content p {
+        font-size: 1.08em;
+        color: #333;
+        margin-bottom: 0.3em;
+      }
+      .service-card-footer {
+        margin-top: 1.2em;
+      }
+      @media (max-width: 900px) {
+        main.container {
+          padding: 1.2rem 0.2rem;
+          max-width: 99vw;
+        }
+        .services-intro-card {
+          padding: 4.5rem 0.7rem 0.7rem 0.7rem;
+          border-radius: 16px;
+          margin-top: 0;
+        }
+        .services-card-grid {
+          gap: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="main-header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/logo/002.png"
+              alt="IT2Help - Expert en dépannage informatique"
+              class="logo-img"
+              loading="lazy" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html" class="active">Prestations</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="contact.html">Demande</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Prestations</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="contact.html">Demande</a></li>
+      </ul>
+    </div>
+
+    <main class="container">
+      <div class="main-content">
+        <div class="content-zone">
+          <div class="content-container">
+            <h1 class="page-title">Nos Prestations</h1>
+            <section class="services-intro-card" id="nos-services">
+              <h1>Nos Services</h1>
+              <a href="contact.html" class="btn-primary"
+                ><i class="fas fa-paper-plane"></i>Faites votre demande</a
+              >
+              <div class="separator"></div>
+              <p>
+                Solutions informatiques adaptées à vos besoins professionnels
+              </p>
+            </section>
+
+            <section class="services-list">
+              <!-- Nouvelle grille de cartes de services -->
+              <div class="services-card-grid">
+                <!-- Carte 1 - Installation -->
+                <div class="service-card-item" id="installation-card">
+                  <div class="service-card-header">
+                    <div class="service-card-icon">
+                      <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="service-card-title">
+                      <h3 id="installation-card-title">
+                        Installation de matériel informatique
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="service-card-content">
+                    <li>Installation de systèmes d'exploitation</li>
+                    <li>Configuration réseau et WiFi</li>
+                    <li>Installation de périphériques</li>
+                    <li>Migration de données</li>
+                    <li>Imprimante et autres périphériques</li>
+                  </div>
+                  <div class="service-card-footer">
+                    <button
+                      class="toggle-service-btn"
+                      data-target="installation-card"
+                      aria-controls="installation-card-content">
+                      En savoir plus <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Carte 2 - Maintenance -->
+                <div class="service-card-item" id="maintenance-card">
+                  <div class="service-card-header">
+                    <div class="service-card-icon">
+                      <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-card-title">
+                      <h3 id="maintenance-card-title">Maintenance</h3>
+                    </div>
+                  </div>
+                  <div class="service-card-content">
+                    <li>Nettoyage complet du système</li>
+                    <li>Mise à jour des logiciels</li>
+                    <li>Optimisation des performances</li>
+                    <li>Sauvegarde des données</li>
+                  </div>
+                  <div class="service-card-footer">
+                    <button
+                      class="toggle-service-btn"
+                      data-target="maintenance-card"
+                      aria-controls="maintenance-card-content">
+                      En savoir plus <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Carte 3 - Réparation -->
+                <div class="service-card-item" id="reparation-card">
+                  <div class="service-card-header">
+                    <div class="service-card-icon">
+                      <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="service-card-title">
+                      <h3 id="reparation-card-title">
+                        Réparations matérielles
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="service-card-content">
+                    <li>Dépannage PC et ordinateurs portables</li>
+                    <li>Récupération de données</li>
+                    <li>Suppression de virus et malwares</li>
+                    <li>Remplacement de composants</li>
+                  </div>
+                  <div class="service-card-footer">
+                    <button
+                      class="toggle-service-btn"
+                      data-target="reparation-card"
+                      aria-controls="reparation-card-content">
+                      En savoir plus <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Carte 4 - Dépannage -->
+                <div class="service-card-item" id="depannage-card">
+                  <div class="service-card-header">
+                    <div class="service-card-icon">
+                      <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="service-card-title">
+                      <h3 id="depannage-card-title">Dépannage à distance</h3>
+                    </div>
+                  </div>
+                  <div class="service-card-content">
+                    <p>
+                      Grâce à nos outils de prise en main à distance, nous
+                      résolvons rapidement vos problèmes informatiques sans
+                      déplacement. Un service réactif pour minimiser vos temps
+                      d'interruption et maximiser votre productivité.
+                    </p>
+                  </div>
+                  <div class="service-card-footer">
+                    <button
+                      class="toggle-service-btn"
+                      data-target="depannage-card"
+                      aria-controls="depannage-card-content">
+                      En savoir plus <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Carte 6 - Sécurité -->
+                <div class="service-card-item" id="securite-card">
+                  <div class="service-card-header">
+                    <div class="service-card-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-card-title">
+                      <h3 id="securite-card-title">Conseil en cybersécurité</h3>
+                    </div>
+                  </div>
+                  <div class="service-card-content">
+                    <p>
+                      Protégez vos données personnelles et professionnelles avec
+                      des solutions adaptées : Pour les particuliers, mise en
+                      place d'antivirus, sauvegardes sécurisées, et bonnes
+                      pratiques numériques. Pour les TPE, antivirus
+                      professionnels, protection et sensibilisation
+                    </p>
+                  </div>
+                  <div class="service-card-footer">
+                    <button
+                      class="toggle-service-btn"
+                      data-target="securite-card"
+                      aria-controls="securite-card-content">
+                      En savoir plus <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="cta-section">
+              <div class="cta-content">
+                <h2>Besoin d'un service sur mesure ?</h2>
+                <p>
+                  Contactez-nous pour discuter de vos projets et besoins
+                  spécifiques.
+                </p>
+                <a href="contact.html" class="btn-primary">Nous contacter</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>IT2Help</h3>
+            <p>
+              Votre partenaire informatique de confiance. Expertise, proximité
+              et solutions sur mesure pour tous vos besoins technologiques.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/profile.php?id=61575849412600&locale=fr_FR"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/it2help?igsh=MnJ4bWtzd2N6aDB2"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section links">
+            <h3>Liens Rapides</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="services.html">Prestations</a></li>
+              <li><a href="catalogue.html">Catalogue</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Rennes (rayon de 40 km)<br />
+              <i class="fas fa-map-marker-alt"></i> La Roche-sur-Yon (rayon de
+              40 km)
+            </p>
+            <p><i class="fas fa-envelope"></i> contact.it2help@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="legal-links">
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="politique-confidentialite.html"
+              >Politique de Confidentialité</a
+            >
+            <a href="cgv.html">CGV</a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year"></span> IT2Help. Tous droits
+              réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de la page">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/mobile-ui-improvements.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="js/google-maps.js"></script>
+    <!-- Script Google Maps avec clé API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSB1tHg6HrtPyEzD265nYXWzwmrp0QHy4&callback=initMap"
+      async
+      defer></script>
+    <script>
+      // Afficher l'année en cours
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Gestion des boutons "En savoir plus" et des cartes de services
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceCards = document.querySelectorAll(".service-card-item");
+        const toggleButtons = document.querySelectorAll(".toggle-service-btn");
+
+        // Initialisation des attributs ARIA pour l'accessibilité
+        toggleButtons.forEach((button) => {
+          button.setAttribute("aria-expanded", "false");
+        });
+
+        // Fonction pour ouvrir/fermer une carte
+        function toggleCard(card) {
+          const targetId = card.id;
+          const button = card.querySelector(".toggle-service-btn");
+          const isExpanded = card.classList.contains("expanded");
+
+          // Si la carte n'est pas déjà étendue, fermer toutes les autres
+          if (!isExpanded) {
+            // Fermer toutes les cartes
+            serviceCards.forEach((otherCard) => {
+              if (
+                otherCard.id !== targetId &&
+                otherCard.classList.contains("expanded")
+              ) {
+                otherCard.classList.remove("expanded");
+                const otherButton = otherCard.querySelector(
+                  ".toggle-service-btn"
+                );
+                otherButton.innerHTML =
+                  'En savoir plus <i class="fas fa-chevron-down"></i>';
+                otherButton.setAttribute("aria-expanded", "false");
+              }
+            });
+          }
+
+          // Basculer l'état de la carte actuelle
+          card.classList.toggle("expanded");
+
+          // Mettre à jour le texte du bouton et l'attribut ARIA
+          if (card.classList.contains("expanded")) {
+            button.innerHTML = 'Réduire <i class="fas fa-chevron-up"></i>';
+            button.setAttribute("aria-expanded", "true");
+          } else {
+            button.innerHTML =
+              'En savoir plus <i class="fas fa-chevron-down"></i>';
+            button.setAttribute("aria-expanded", "false");
+          }
+        }
+
+        // Gérer les clics sur les boutons
+        toggleButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.stopPropagation(); // Empêche la propagation pour éviter de déclencher le clic de la carte
+            const card = this.closest(".service-card-item");
+            toggleCard(card);
+          });
+        });
+
+        // Rendre les cartes entières cliquables
+        serviceCards.forEach((card) => {
+          card.addEventListener("click", function (e) {
+            // Ne pas déclencher si on clique sur le bouton (déjà géré ci-dessus)
+            if (!e.target.closest(".toggle-service-btn")) {
+              toggleCard(this);
+            }
+          });
+
+          // Ajouter un attribut pour l'accessibilité
+          card.setAttribute("role", "region");
+          card.setAttribute("aria-labelledby", card.id + "-title");
+        });
+
+        // Gestion de la navigation au clavier pour l'accessibilité
+        serviceCards.forEach((card) => {
+          card.setAttribute("tabindex", "0");
+
+          card.addEventListener("keydown", function (e) {
+            // Ouvrir/fermer avec la touche Entrée ou Espace
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggleCard(this);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
