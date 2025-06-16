@@ -51,9 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Si Font Awesome n'est pas correctement chargé, utiliser les icônes de secours
     if (!isFontAwesomeLoaded) {
-      console.log(
-        "Font Awesome non chargé correctement, utilisation des icônes de secours"
-      );
       document.querySelectorAll(".service-icon i").forEach(function (icon) {
         icon.style.display = "none";
       });

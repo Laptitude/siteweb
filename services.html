@@ -41,7 +41,6 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mobile.css" />
-    <link rel="stylesheet" href="css/common-ui.css" />
     <link rel="stylesheet" href="css/google-maps.css" />
     <link
       rel="stylesheet"
@@ -463,102 +462,12 @@
     <script src="js/mobile-ui-improvements.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cookie-consent.js"></script>
+    <script src="js/services-page.js"></script>
     <script src="js/google-maps.js"></script>
     <!-- Script Google Maps avec clé API -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSB1tHg6HrtPyEzD265nYXWzwmrp0QHy4&callback=initMap"
       async
       defer></script>
-    <script>
-      // Afficher l'année en cours
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-
-      // Gestion des boutons "En savoir plus" et des cartes de services
-      document.addEventListener("DOMContentLoaded", function () {
-        const serviceCards = document.querySelectorAll(".service-card-item");
-        const toggleButtons = document.querySelectorAll(".toggle-service-btn");
-
-        // Initialisation des attributs ARIA pour l'accessibilité
-        toggleButtons.forEach((button) => {
-          button.setAttribute("aria-expanded", "false");
-        });
-
-        // Fonction pour ouvrir/fermer une carte
-        function toggleCard(card) {
-          const targetId = card.id;
-          const button = card.querySelector(".toggle-service-btn");
-          const isExpanded = card.classList.contains("expanded");
-
-          // Si la carte n'est pas déjà étendue, fermer toutes les autres
-          if (!isExpanded) {
-            // Fermer toutes les cartes
-            serviceCards.forEach((otherCard) => {
-              if (
-                otherCard.id !== targetId &&
-                otherCard.classList.contains("expanded")
-              ) {
-                otherCard.classList.remove("expanded");
-                const otherButton = otherCard.querySelector(
-                  ".toggle-service-btn"
-                );
-                otherButton.innerHTML =
-                  'En savoir plus <i class="fas fa-chevron-down"></i>';
-                otherButton.setAttribute("aria-expanded", "false");
-              }
-            });
-          }
-
-          // Basculer l'état de la carte actuelle
-          card.classList.toggle("expanded");
-
-          // Mettre à jour le texte du bouton et l'attribut ARIA
-          if (card.classList.contains("expanded")) {
-            button.innerHTML = 'Réduire <i class="fas fa-chevron-up"></i>';
-            button.setAttribute("aria-expanded", "true");
-          } else {
-            button.innerHTML =
-              'En savoir plus <i class="fas fa-chevron-down"></i>';
-            button.setAttribute("aria-expanded", "false");
-          }
-        }
-
-        // Gérer les clics sur les boutons
-        toggleButtons.forEach((button) => {
-          button.addEventListener("click", function (e) {
-            e.stopPropagation(); // Empêche la propagation pour éviter de déclencher le clic de la carte
-            const card = this.closest(".service-card-item");
-            toggleCard(card);
-          });
-        });
-
-        // Rendre les cartes entières cliquables
-        serviceCards.forEach((card) => {
-          card.addEventListener("click", function (e) {
-            // Ne pas déclencher si on clique sur le bouton (déjà géré ci-dessus)
-            if (!e.target.closest(".toggle-service-btn")) {
-              toggleCard(this);
-            }
-          });
-
-          // Ajouter un attribut pour l'accessibilité
-          card.setAttribute("role", "region");
-          card.setAttribute("aria-labelledby", card.id + "-title");
-        });
-
-        // Gestion de la navigation au clavier pour l'accessibilité
-        serviceCards.forEach((card) => {
-          card.setAttribute("tabindex", "0");
-
-          card.addEventListener("keydown", function (e) {
-            // Ouvrir/fermer avec la touche Entrée ou Espace
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              toggleCard(this);
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

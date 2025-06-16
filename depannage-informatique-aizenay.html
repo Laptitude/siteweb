@@ -565,32 +565,11 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Script pour afficher l'année en cours dans le footer -->
-    <script>
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-
-      // Afficher plus de services sur mobile
-      document.addEventListener("DOMContentLoaded", function () {
-        const showMoreBtn = document.getElementById("show-more-services");
-        const hiddenServices = document.querySelectorAll(
-          ".services-grid .mobile-hide"
-        );
-
-        if (showMoreBtn && hiddenServices.length > 0) {
-          showMoreBtn.addEventListener("click", function () {
-            hiddenServices.forEach((service) => {
-              service.classList.remove("mobile-hide");
-            });
-            showMoreBtn.style.display = "none";
-          });
-        }
-      });
-    </script>
 
     <!-- Scripts JS -->
     <script src="js/mobile-ui-improvements.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cookie-consent.js"></script>
+    <script src="js/show-more-services.js"></script>
   </body>
 </html>

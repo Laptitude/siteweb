@@ -30,7 +30,6 @@ let infoWindows = {};
 
 // Fonction d'initialisation de la carte - rendre explicitement globale
 window.initMap = function () {
-  console.log("Fonction initMap appelée depuis google-maps.js");
 
   // Vérification de la disponibilité de l'API Google Maps
   if (typeof google === "undefined" || typeof google.maps === "undefined") {
@@ -174,14 +173,11 @@ function showAllZones() {
 // Charger la carte quand le document est prêt
 window.addEventListener("load", function () {
   // Vérifier si le script Google Maps est déjà chargé
-  console.log("Événement load déclenché dans google-maps.js");
   if (typeof google === "undefined") {
     console.error(
       "Google Maps API n'est pas chargée. Veuillez ajouter la clé API."
     );
   } else {
-    console.log(
-      "API Google Maps trouvée, initMap sera appelée par le callback API."
     );
   }
 });
